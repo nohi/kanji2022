@@ -1,0 +1,40 @@
+<div id="no-metamask" style="display: none;">
+    <p>MetaMaskがインストールされていません</p>
+</div>
+
+<div id="metamask" style="display: none;">
+    <table width="432.0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <th valign="top" width="120.0">投票締め切り日</th>
+                <td valign="top"><span id="time-limit"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="432.0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr class="after-connect-metamask" style="display: none;">
+                <th valign="top" width="120.0">Wallet Address</th>
+                <td valign="top"><a id="wallet-address" target="_blank" rel="noopener noreferrer"></a></td>
+            </tr>
+            <tr class="after-connect-metamask" style="display: none;">
+                <th valign="top" width="120.0">Network ID</th>
+                <td valign="top"><span id="network-id"></span></td>
+            </tr>
+            <tr class="after-connect-metamask" style="display: none;">
+                <th valign="top" width="120.0">あなたの予想</th>
+                <td valign="top"><span id="your-predict"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <a id="connect-metamask" class="button button-normal">ブロックチェーンネットワークに接続</a>
+    </div>
+
+    <div class="after-connect-metamask" style="display: none;">
+        <input id="kanji-input" type="text" maxlength="1" minlength="1">
+        <a id="kanji-submit" class="button button-normal">投票する</a>
+    </div>
+</div>
