@@ -39,7 +39,7 @@ const initDom = () => {
         // dom update addr
         const elmWA = document.getElementById('wallet-address');
         elmWA.innerText = window.ethereum.selectedAddress;
-        elmWA.href = 'https://ropsten.etherscan.io/address/' + window.ethereum.selectedAddress; // TODO: change
+        elmWA.href = 'https://shibuya.subscan.io/account/' + window.ethereum.selectedAddress;
 
         // dom update chainId
         domUpdateNetworkInfo(window.ethereum.chainId);
