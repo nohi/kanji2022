@@ -253,5 +253,5 @@ const addStyleTag = () => {
         }
     }`;
 
-    document.head.appendChild(style);
+    document.head.appendChild(customStyle);
 };
