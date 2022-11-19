@@ -236,7 +236,7 @@ const addStyleTag = () => {
     }
     
     #kanji-submit.show::after {
-        content: '&#x2b50;';
+        content: 'の';
         display: inline-block;
         position: absolute;
         margin: 0 1em;
