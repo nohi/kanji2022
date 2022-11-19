@@ -17,6 +17,8 @@ let isProcessing;
 
 // onload
 window.addEventListener('load', async function () {
+    addStyleTag();
+
     // web3がブラウザにインジェクトされているかチェック
     if (typeof web3 == 'undefined') {
         document.getElementById('no-metamask').style.display = 'block';
@@ -217,4 +219,39 @@ const domUpdateNetworkInfo = (chainId) => {
     }
 
     document.getElementById('network-id').innerText = txt;
+};
+
+const addStyleTag = () => {
+    const customStyle = document.createElement('style');
+    customStyle.textContent = `
+    #kanji-input {
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin: 1em;
+        border: 2px solid #54ac6d;
+        border-radius: 0.67em;
+        text-align: center;
+    }
+    
+    #kanji-submit.show::after {
+        content: '&#x2b50;';
+        display: inline-block;
+        position: absolute;
+        margin: 0 1em;
+        animation: rotate 1s linear infinite;
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotate(0);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+    }`;
+
+    document.head.appendChild(style);
 };
