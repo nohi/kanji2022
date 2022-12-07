@@ -128,6 +128,10 @@ contract Kanji2022 {
             });
     }
 
+    function getCorrectAnswer() public view returns (string memory) {
+        return string(abi.encodePacked(_correctAnswer));
+    }
+
     /*
      * set answer
      */
@@ -140,6 +144,13 @@ contract Kanji2022 {
      */
     function getWinners() public view returns (address[] memory) {
         return _revPredicts[_correctAnswer];
+    }
+
+    /*
+     * set time limit
+     */
+    function setTimeLimit(uint256 tl) public onlyOwner {
+        timeLimit = tl;
     }
 
     // ---- for debug ----
